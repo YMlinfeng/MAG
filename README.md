@@ -1,5 +1,5 @@
 # MAG
 
-Code is coming soon! \\
+Code is coming soon! \
 Other files are going to upload！
 
