@@ -1,0 +1,63 @@
+## config.yaml
+# Three-stage training parameters from paper Section 2.3
+training:
+  stage1:
+    model: "FLUX.1dev"                 # Foundational model reference [19]
+    dataset:
+      type: "3D-game-images"            # Large-scale 3D game images
+    hyperparameters:
+      batch_size: 64                    # Standard batch size used in Stage 2
+      learning_rate: 5e-5               # Based on Stage 2 settings
+      # Paper mentions OpenSora-style techniques but no exact LR - using Stage 2 LR
+
+  stage2:
+    model: "UC-3DMMDiT"                 # MAG backbone
+    dataset:
+      type: "image-to-video"             # Curated multi-resolution datasets
+      sources: ["CogVideoX"]             # Reference [11]
+    hyperparameters:
+      batch_size: 64                    # Explicitly stated in paper Section 2.3
+      learning_rate: 5e-5                 # AdamW learning rate (Section 2.3)
+      weight_decay: 0.05                 # AdamW weight decay (Section 2.3)
+      steps: 500000                       # Explicitly stated in paper
+
+  stage3:
+    model: "APB"                         # Action Prompt Block
+    dataset:
+      type: "gameplay-motion"            # High-quality gameplay motion data
+    hyperparameters:
+      batch_size: 64                     # Consistent with previous stages
+      learning_rate: 1e-5                # Typical fine-tuning rate (not specified)
+      steps: 100000                      # Explicitly stated in paper
+      freeze_backbone: true              # Backbone remains frozen
+
+# Evaluation parameters from Section 3.1
+evaluation:
+  framework: "VBench++"                  # Evaluation protocol reference [VBench++]
+  samples: 50                            # Per model (Section 3.1)
+  frames: 60                             # Per sample (Section 3.1)
+  resolution: [1280, 720]                # 720p (Table 1 caption)
+  metrics:                               # From Table 1 headings
+    video_quality: ["TF", "MS", "DD", "FID", "AQ"]
+    control_performance: ["SR", "Scene", "Color", "SC", "BC", "OC", "AS"]
+
+# Encoder specifications from Section 2.2
+encoders:
+  video:
+    type: "WFVAE"                        # Wavelet-transform encoder [10]
+  
+  text:
+    type: "mT5"                          # Environmental text encoder [20]
+  
+  semantics:
+    type: "CLIP"                         # Auxiliary semantics [18]
+    output_type: "global_scalars"         # α,β,γ scalars for LayerNorm
+
+# Model architecture parameters
+model:
+  uc_3dmm_attn:
+    bias_control: "ZeroConv1D"            # Zero-conv for Δγ (Eq 6-7)
+  
+  apb:
+    modulation: "scale-shift"             # α(a_t) and β(a_t) scaling (Eq 9)
+    gating: "learned"                     # g_t ∈ (0,1) from MLP (Eq 10)
