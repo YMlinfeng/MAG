@@ -402,4 +402,6 @@ class Evaluator:
                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
     
     def _save_video(self, frames: List[np.ndarray], output_path: str) -> None:
-        """Save frames as video file
+        """Save frames as video file"""
+        """"some bug, under fixing"""
+        pass
