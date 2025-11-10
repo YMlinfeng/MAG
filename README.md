@@ -39,6 +39,9 @@
 
 Driven by the growing demand for immersive and personalized gaming experiences, existing game video generation models often lack robust multi-modal control and suffer from spatial misalignment or autoregressive drift, thereby necessitating a more advanced real-time interactive solution. Make-A-Game (MAG) represents the first DiT-based interactive game video generation model that unifies spatial and non-spatial alignment control signals within the UC-3DMMAttn module and employs Action Prompt Blocks (APBs) for precise, real-time manipulation of in-game entities.
 
+## demo video
+[] loading...
+
 ##  Project Overview
 
 **Make-A-Game (MAG)** represents a transformative breakthrough in interactive neural game simulation, addressing fundamental limitations in existing video generation paradigms. While contemporary models such as [Sora](https://openai.com/sora), [CogVideoX](https://github.com/THUDM/CogVideo), and [OpenSora](https://github.com/hpcaitech/Open-Sora) have demonstrated remarkable capabilities in general-purpose video synthesis, they remain inadequate for interactive gaming scenarios due to three critical challenges:
