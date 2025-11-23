@@ -27,7 +27,7 @@
   <strong><a href="#training-pipeline">Training Pipeline</a></strong> •
   <strong><a href="#evaluation">Evaluation</a></strong> •
   <strong><a href="#experimental-results">Results</a></strong> •
-  <strong><a href="#todo-roadmap">TODO</a></strong>
+  <strong><a href="#todo-roadmap">TODO lists</a></strong>
 </p>
 
 </div>
