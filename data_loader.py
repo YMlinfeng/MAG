@@ -27,7 +27,7 @@ class MAGDataLoader(Dataset):
         """
         self.stage = stage
         self.config = config
-        self.clip_frames = self.config.config_data['evaluation']['frames']  # Default: 60
+        self.clip_frames = self.config.config_data['evaluation']['frames']  # Default: 60/120
         self.target_res = tuple(self.config.config_data['evaluation']['resolution'])  # (1280, 720)
         
         # Get dataset path
