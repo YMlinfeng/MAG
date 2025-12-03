@@ -352,6 +352,7 @@ class MAGModel(nn.Module):
 # Testing and configuration handling
 if __name__ == "__main__":
     # Sample configuration
+    # Completed in config folder, under revision
     sample_config = {
         "model": {
             "uc_3dmm_attn": {"d_model": 512},
