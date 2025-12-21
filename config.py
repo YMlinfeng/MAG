@@ -1,5 +1,5 @@
 """
-Configuration handler for the MAG system
+Configuration of the MAG
 Loads and provides stage-specific settings from config.yaml
 """
 
