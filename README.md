@@ -155,7 +155,6 @@ pip install pywavelets lpips torchmetrics
 | Demo Interface | 🔄 In Progress | 40% | Gradio app under development |
 
 #### Q4 2025
-- [ ] Release pre-trained models for all three stages
 - [ ] Web demo with real-time interaction
 - [ ] Comprehensive API documentation
 - [ ] Colab notebook for easy experimentation
@@ -197,7 +196,7 @@ This work was supported by Huawei Technologies Co., Ltd., under the research pro
 
 This project is licensed under the Apache-2.0 License - see the LICENSE file for details.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the research community! Please see our Contributing Guidelines for details on:
 - Code style and standards
