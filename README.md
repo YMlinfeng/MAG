@@ -154,21 +154,6 @@ pip install pywavelets lpips torchmetrics
 | Pre-trained Models | 🟡 Partial | 60% | Stage 1 & 2 models available |
 | Demo Interface | 🔄 In Progress | 40% | Gradio app under development |
 
-#### Q4 2025
-- [ ] Web demo with real-time interaction
-- [ ] Comprehensive API documentation
-- [ ] Colab notebook for easy experimentation
-- [ ] Integration with Diffusers library
-- [ ] Support for 1080p generation
-- [ ] Multi-player game simulation
-- [ ] Extended action vocabulary (50+ actions)
-
-#### Q1 2026
-- [ ] Real-time streaming support
-- [ ] Plugin for game engines (Unity/Unreal)
-- [ ] Mobile optimization research
-- [ ] Community model zoo
-- [ ] Model quantization for deployment
 
 
 
